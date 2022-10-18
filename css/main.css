@@ -1,0 +1,63 @@
+*, *::before, *::after {box-sizing: border-box;}
+
+html,body{
+    margin: 0%;
+    height: 100%;
+}
+body{
+    background-color: #1e1f23;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* Animacion */
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .box
+{
+    transform-style:preserve-3d ;
+    animation: animate 25s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateX(0deg) rotate(25deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateX(360deg) rotate(25deg);
+
+    }
+    
+}
+.container .box span
+{
+    position: absolute;
+    color: white;
+    font-size: 3.5em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0 18px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.5), transparent);
+    line-height: 0.76em;
+    transform-style: preserve-3d;
+    text-shadow: 0 5px 15px rgba(0.0.0.0.25);
+    transform: translate(-50%, -50%) rotateX(calc(var(--i)* 22.5deg)) translateZ(107px);
+
+}
+/* Aniation and Style */
+.container .box span i:nth-child(1){
+    
+    font-style: initial;
+    color: #f6ff00;
+}
+.container .box span i:nth-child(2)
+{
+    font-style: initial;
+    color: #ff1271;
+}
